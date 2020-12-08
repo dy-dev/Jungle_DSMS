@@ -1,6 +1,6 @@
-package com.arcreane;
+package com.arcreane.resources;
 
-public class Plant {
+public class Plant extends Resource{
     private static int s_iMaxPlantNRJPoints;
     private static int s_iMaxAge;
 
@@ -12,10 +12,11 @@ public class Plant {
     private int m_iMaxNbNRJ;
     private int m_iCurrentNRJ;
 
-    void step(){
-    }
-
-    void draw(){
+    @Override
+    public void step() {
+        System.out.println("en tant que plante j'appelle le comportement parent");
+        super.step();
+        System.out.println("je step je suis une plante");
     }
 
     void pop(){

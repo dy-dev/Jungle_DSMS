@@ -17,7 +17,7 @@ public class Coords {
      * @param p_Coords2
      * @return distance between points
      */
-    static float distance (Coords p_Coords1, Coords p_Coords2){
+    public static float distance (Coords p_Coords1, Coords p_Coords2){
         return 0;
     }
 

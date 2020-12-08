@@ -1,18 +1,15 @@
-package com.arcreane;
+package com.arcreane.animals.sense;
+
+import com.arcreane.animals.Predator;
 
 /***
  * Class representing the hearing sense
  */
-public class Hear {
+public class Hear extends Sense {
     /**
      * Max distance capacity to hear predator approaching
      */
-    static int s_iMaxHearingCapacity;
-    /***
-     * Capacity for this instance to hear an approaching predator
-     * ranges from 0 to s_iMaxHearingCapacity
-     */
-    int m_iHearingCapacity;
+    static int s_iMaxHearingCapacity = 150;
 
     /***
      * Checks if a predator is heard or not

@@ -5,9 +5,12 @@ public class Weather {
     static float s_fPercentageRaining;
     static Terrain s_Terrain;
 
-    void step(){
+    static void step(){
+        //Calcul random pour savoir si il doit pleuvoir
+        //Avec prise en compte du nombre de jour où il n'a pas plus
     }
 
-    void raining(){
+    static void raining(){
+        //Arroser le terrain
     }
 }
