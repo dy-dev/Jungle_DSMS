@@ -48,4 +48,15 @@ public class WaterSpot extends Resource {
 
     void evaporate() {
     }
+
+    public boolean containsCoords(Coords p_coords) {
+        int distanceX = Math.abs(m_Coords.getX() - p_coords.getX());
+        int distanceY = Math.abs(m_Coords.getY() - p_coords.getY());
+        if (distanceX <= m_iWidth/2 +1 && distanceY <= m_iHeight/2 +1){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }

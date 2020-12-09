@@ -30,10 +30,10 @@ public class Terrain {
         initBoard();
         m_JungleObjectsArray = new JungleObject[301];
         m_JungleObjectsArray[0] = new WaterSpot();
-        for (int i = 1; i < m_JungleObjectsArray.length - 2; i+=3) {
+        for (int i = 1; i < m_JungleObjectsArray.length - 2; i += 3) {
             m_JungleObjectsArray[i] = new Predator();
-            m_JungleObjectsArray[i+1] = new Prey();
-            m_JungleObjectsArray[i+2] = new Plant();
+            m_JungleObjectsArray[i + 1] = new Prey();
+            m_JungleObjectsArray[i + 2] = new Plant();
         }
     }
 
@@ -46,7 +46,7 @@ public class Terrain {
     }
 
     public WaterSpot getWaterSpot() {
-        return (WaterSpot) m_JungleObjectsArray[0] ;
+        return (WaterSpot) m_JungleObjectsArray[0];
     }
 
     private void initBoard() {
@@ -86,5 +86,22 @@ public class Terrain {
 
     public Prey[] getPreys() {
         return null;//m_PreysArray;
+    }
+
+    public boolean isCoordonateOccuped(Coords m_coords) {
+        return isInWater(m_coords) || isOccuped(m_coords);
+    }
+
+    private boolean isOccuped(Coords m_coords) {
+        for (JungleObject jungleObject : m_JungleObjectsArray) {
+            if (jungleObject != null && Coords.isSame(m_coords, jungleObject.getCoords())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isInWater(Coords m_coords) {
+        return (getWaterSpot() != null) && getWaterSpot().containsCoords(m_coords);
     }
 }
