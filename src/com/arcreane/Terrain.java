@@ -24,6 +24,9 @@ public class Terrain {
     private Terrain() {
         m_iWidth = 180;
         m_iHeight = 30;
+    }
+
+    public void initTerrain() {
         initBoard();
         m_JungleObjectsArray = new JungleObject[301];
         m_JungleObjectsArray[0] = new WaterSpot();
@@ -32,6 +35,14 @@ public class Terrain {
             m_JungleObjectsArray[i+1] = new Prey();
             m_JungleObjectsArray[i+2] = new Plant();
         }
+    }
+
+    public int getM_iWidth() {
+        return m_iWidth;
+    }
+
+    public int getM_iHeight() {
+        return m_iHeight;
     }
 
     public WaterSpot getWaterSpot() {
@@ -48,7 +59,7 @@ public class Terrain {
                     m_BoardArray[i][j] = "|";
 
                 } else {
-                    m_BoardArray[i][j] = "🌊";
+                    m_BoardArray[i][j] = " ";
                 }
             }
         }

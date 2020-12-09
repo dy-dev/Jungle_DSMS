@@ -11,6 +11,11 @@ public class Coords {
     int m_iX;
     int m_iY;
 
+    public Coords(int x, int y) {
+        m_iX = x;
+        m_iY = y;
+    }
+
     /***
      * Calculate distance between 2 points given in parameter
      * @param p_Coords1
@@ -28,6 +33,14 @@ public class Coords {
      * @return true if same false otherwise
      */
     static boolean isSame(Coords p_Coords1, Coords p_Coords2){
-        return false;
+        return (p_Coords1.getX() == p_Coords2.getX() &&
+                p_Coords1.getY() == p_Coords2.getY() );
+    }
+
+    public int getY() {
+        return m_iY;
+    }
+    public int getX() {
+        return m_iX;
     }
 }

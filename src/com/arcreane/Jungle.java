@@ -9,6 +9,7 @@ public class Jungle {
 
     public static void main(String[] args) throws InterruptedException {
         Terrain terrain = Terrain.getInstance();
+        terrain.initTerrain();
         Weather.s_Terrain = terrain;
         terrain = Terrain.getInstance();
 
@@ -20,9 +21,9 @@ public class Jungle {
 
         while(terrain.getWaterSpot().getQuantity() > 0){
            // Weather.step();
-            terrain.step();
+//            terrain.step();
 
-            //terrain.draw();
+            terrain.draw();
 
             Thread.sleep(250);
             break;

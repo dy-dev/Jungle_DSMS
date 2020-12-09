@@ -15,9 +15,10 @@ public class Prey extends Animal {
         super(age, speed);
 
     }
-
+    // on implémente le constructeur
     public Prey() {
         super(0, 0);
+        displayString = "*";
     }
 
 

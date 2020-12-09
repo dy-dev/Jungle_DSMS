@@ -25,6 +25,7 @@ public class Predator extends Animal{
 
     public Predator(){
         super(10);
+        displayString = "!";
     }
 
 

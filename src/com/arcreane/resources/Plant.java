@@ -12,6 +12,10 @@ public class Plant extends Resource{
     private int m_iMaxNbNRJ;
     private int m_iCurrentNRJ;
 
+    public Plant () {
+        displayString = "@";
+    }
+
     @Override
     public void step() {
         System.out.println("en tant que plante j'appelle le comportement parent");
